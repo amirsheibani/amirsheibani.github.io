@@ -6,9 +6,12 @@
 In previous roles, me have developed more than 8 Flutter applications & 3 android & 3 iOS applications for enterprise companies.
 
 ## Experience
-<p><span style="color: #ffab98"> 2022-September - present</span><span style="color: #8cffe1"> Apollon </span> (England London) Senior Flutter Developer </p>
+
+<p><span style="color: #ffab98"> 2024-October - 2026-December</span><span style="color: #8cffe1"> City Development and innovation (Bank Shahr) </span> (Iran Tehran) Team Lead Flutter </p>
+<p><span style="color: #ffab98"> 2023-April - 2025-Feb</span><span style="color: #8cffe1"> EWays </span> (Iran Tehran) Senior Flutter Developer </p>
+<p><span style="color: #ffab98"> 2022-September - 2023-Aguest</span><span style="color: #8cffe1"> Apollon </span> (England London) Senior Flutter Developer </p>
 <p><span style="color: #ffab98"> 2022-April - 2022-September</span><span style="color: #8cffe1"> Squad Technology, Information and Internet </span> (England London) Senior Flutter Developer </p>
-<p><span style="color: #ffab98"> 2022-July - present</span><span style="color: #ff452c"> Ernyka Holding </span> (Iran Tehran) Senior Flutter Developer </p>
+<p><span style="color: #ffab98"> 2022-July - 2022-September</span><span style="color: #ff452c"> Ernyka Holding </span> (Iran Tehran) Senior Flutter Developer </p>
 <p><span style="color: #ffab98"> 2021-April - 2022-April</span><span style="color: #ff452c"> Behpardaz Jahan Company </span> (Iran Tehran) Senior Flutter Developer </p>
 <p><span style="color: #ffab98"> 2016-May - 2021-April</span><span style="color: #0092ff"> Hamgam Pardaz Company </span> (Iran Tehran) Middle & Senior Mobile Developer </p>
 <p><span style="color: #ffab98"> 2014-Sep - 2016-May</span><span style="color: #352dff"> Kumeshian Company </span> (Iran Tehran) Junior & Middle Mobile & MicroController Developer </p>
