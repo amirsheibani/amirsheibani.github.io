@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Amir Sheibani | Mobile Developer</title>
+  <title>Amir Sheibani | Senior Flutter Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Senior Flutter engineer — platform architecture, banking at scale, enterprise ERP. Open to Finland, Germany, and the Nordics." />
 
   <style>
     :root {
@@ -35,7 +36,7 @@
 
     header {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 48px;
     }
 
     header h1 {
@@ -47,6 +48,40 @@
     header p {
       color: var(--muted);
       font-size: 1.1rem;
+      margin: 0 0 8px;
+    }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 22px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .cta .primary {
+      background: var(--primary);
+      color: #020617;
+    }
+
+    .cta .secondary {
+      background: rgba(255,255,255,0.08);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .cta a:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.08);
     }
 
     section {
@@ -72,6 +107,15 @@
 
     .experience-item strong {
       color: var(--accent);
+    }
+
+    .experience-item .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .experience-item ul {
+      margin: 8px 0 0;
     }
 
     ul {
@@ -109,6 +153,10 @@
       font-size: 0.9rem;
       margin-top: 40px;
     }
+
+    @media (max-width: 640px) {
+      header h1 { font-size: 2.1rem; }
+    }
   </style>
 </head>
 
@@ -117,78 +165,126 @@
 
     <header>
       <h1>Amir Sheibani</h1>
-      <p>Team Lead Flutter Developer · Mobile Engineer · AI Student</p>
+      <p>Senior Flutter Engineer · Platform &amp; Architecture · Mobile Banking at Scale</p>
+      <p>Open to Finland, Germany &amp; the Nordics</p>
+      <div class="cta">
+        <a class="primary" href="./resume/Amir_Sheibani_Resume_EU.pdf">Download Resume (EN)</a>
+        <a class="secondary" href="./resume/Amir_Sheibani_Resume_IR.pdf">دانلود رزومه (FA)</a>
+        <a class="secondary" href="https://www.linkedin.com/in/amir-sheibani-53a34954">LinkedIn</a>
+      </div>
     </header>
 
     <section>
       <h2>About Me</h2>
       <p>
-        Mobile programmer with more than 10 years of professional experience in dynamic and deadline-oriented work environments.
-        Developed more than 8 Flutter applications and multiple Android & iOS enterprise applications.
+        Senior Flutter / mobile engineer with 10+ years building production Android, iOS, and Flutter apps across banking, enterprise ERP, marketplaces, and fintech.
+        Currently focused on <strong>platform and infrastructure code</strong>: designing a Flutter base framework and Clean Architecture foundations for an enterprise ERP product.
+        Previously Flutter Team Lead for <strong>Hamrah Shahr Plus (Bank Shahr)</strong> — a live banking app with <strong>3.5M+ installs</strong> on Cafe Bazaar.
       </p>
+    </section>
+
+    <section>
+      <h2>Resume</h2>
+      <ul>
+        <li><a href="./resume/Amir_Sheibani_Resume_EU.pdf">English PDF</a> · <a href="./resume/Amir_Sheibani_Resume.md">Markdown</a></li>
+        <li><a href="./resume/Amir_Sheibani_Resume_IR.pdf">Persian PDF</a> · <a href="./resume/Amir_Sheibani_Resume_IR.md">Markdown</a></li>
+      </ul>
     </section>
 
     <section>
       <h2>Experience</h2>
 
       <div class="experience-item">
-        <strong>2024-2026 · Bank Shahr (Tehran)</strong> — Team Lead Flutter
+        <strong>Jan 2026 – Present · Zarpparan Hushmand</strong>
+        <div class="meta">Aria Fateh Middle East Holding — Minerva ERP · Senior Flutter (Platform &amp; Architecture)</div>
+        <ul>
+          <li>Infrastructure and platform code for an enterprise ERP Flutter dashboard</li>
+          <li>Internal Flutter base framework, Clean Architecture, DI/state separation, multi-flavor delivery</li>
+        </ul>
       </div>
+
       <div class="experience-item">
-        <strong>2023-2025 · EWays (Tehran)</strong> — Senior Flutter Developer
+        <strong>Feb 2024 – Dec 2025 · CityDI (Bank Shahr)</strong>
+        <div class="meta">Flutter Team Lead — Hamrah Shahr Plus</div>
+        <ul>
+          <li>Led Flutter delivery for a banking app with 3.5M+ Cafe Bazaar installs (Android / iOS / PWA)</li>
+          <li>Owned release engineering with Fastlane, GitHub Actions, and Firebase App Distribution</li>
+        </ul>
       </div>
+
       <div class="experience-item">
-        <strong>2022-2023 · Apollon (London)</strong> — Senior Flutter Developer
+        <strong>Sep 2023 – Feb 2024 · CityDI</strong>
+        <div class="meta">Senior Flutter Developer</div>
       </div>
+
       <div class="experience-item">
-        <strong>2022 · Squad Technology (London)</strong> — Senior Flutter Developer
+        <strong>Jun 2023 – Mar 2025 · E-Ways</strong>
+        <div class="meta">Senior Flutter Developer (Contract / Part-time) · Vendor marketplace</div>
       </div>
+
       <div class="experience-item">
-        <strong>2021-2022 · Behpardaz Jahan (Tehran)</strong> — Senior Flutter Developer
+        <strong>Sep 2022 – Aug 2023 · Apollon (UK, remote)</strong>
+        <div class="meta">Senior Flutter Developer · Rental startup</div>
       </div>
+
       <div class="experience-item">
-        <strong>2016-2021 · Hamgam Pardaz (Tehran)</strong> — Mobile Developer
+        <strong>Jul 2022 – Mar 2023 · Ernyka Holding</strong>
+        <div class="meta">Senior Flutter Developer · Crypto wallet / trading apps</div>
       </div>
+
       <div class="experience-item">
-        <strong>2014-2016 · Kumeshian (Tehran)</strong> — Junior/Middle Developer
+        <strong>Apr 2022 – Oct 2022 · Squad</strong>
+        <div class="meta">Flutter Developer · Social commerce</div>
+      </div>
+
+      <div class="experience-item">
+        <strong>Apr 2021 – Jul 2022 · Behpardaz Jahan</strong>
+        <div class="meta">Lead / Senior Flutter &amp; Frontend</div>
+      </div>
+
+      <div class="experience-item">
+        <strong>Sep 2017 – Apr 2021 · Hamgam Pardaz</strong>
+        <div class="meta">Software Development Supervisor</div>
+      </div>
+
+      <div class="experience-item">
+        <strong>Jun 2016 – Sep 2017 · Hamgam Pardaz</strong>
+        <div class="meta">Mobile Developer (Android / iOS)</div>
+        <ul>
+          <li>Native Android JTI field-sales app for 500+ sales representatives</li>
+          <li>Native iOS commerce app in Swift with ARKit experiences</li>
+        </ul>
       </div>
     </section>
 
     <section>
-      <h2>Mobile & Backend Skills</h2>
+      <h2>Skills</h2>
       <ul>
-        <li>Flutter, Dart, Bloc/Cubit, Clean Architecture</li>
-        <li>Firebase, WebSocket, Sendbird SDK</li>
-        <li>Google Maps, Auth, StreetView</li>
-        <li>Django REST, Dart Aqueduct</li>
-        <li>PostgreSQL 13</li>
-        <li>nginx, Apache, Tomcat</li>
-        <li>Ubuntu, CentOS</li>
-        <li>TensorFlow</li>
+        <li>Flutter (Android / iOS / Web / PWA), Swift/iOS, Kotlin-Java/Android</li>
+        <li>Clean Architecture, platform/framework design, feature-first modules</li>
+        <li>Riverpod, Bloc/Cubit, get_it, injectable, Dio, go_router</li>
+        <li>Fastlane, GitHub Actions, Firebase App Distribution, Sentry</li>
+        <li>Domain: banking/payments, enterprise ERP, marketplaces, crypto wallets</li>
       </ul>
     </section>
 
     <section>
-      <h2>Education & Interests</h2>
+      <h2>Education</h2>
       <ul>
-        <li>MSc Artificial Intelligence — Islamic Azad University (South Tehran)</li>
-        <li>Mobile App Development</li>
-        <li>Artificial Intelligence</li>
-        <li>Pro bono consulting & volunteering</li>
+        <li>B.Sc. Computer Hardware Engineering — Adiban Garmsar</li>
+        <li>A.Sc. Computer Software Engineering — QIAU, Qazvin</li>
       </ul>
     </section>
 
     <section>
       <h2>Tech Stack</h2>
       <div class="badges">
-        <img src="https://img.shields.io/badge/-Flutter-05122A?style=flat&logo=flutter" />
-        <img src="https://img.shields.io/badge/-Dart-05122A?style=flat&logo=dart" />
-        <img src="https://img.shields.io/badge/-Android-05122A?style=flat&logo=android" />
-        <img src="https://img.shields.io/badge/-Swift-05122A?style=flat&logo=swift" />
-        <img src="https://img.shields.io/badge/-Python-05122A?style=flat&logo=python" />
-        <img src="https://img.shields.io/badge/-Django-05122A?style=flat&logo=django" />
-        <img src="https://img.shields.io/badge/-PostgreSQL-05122A?style=flat&logo=postgresql" />
-        <img src="https://img.shields.io/badge/-Git-05122A?style=flat&logo=git" />
+        <img src="https://img.shields.io/badge/-Flutter-05122A?style=flat&logo=flutter" alt="Flutter" />
+        <img src="https://img.shields.io/badge/-Dart-05122A?style=flat&logo=dart" alt="Dart" />
+        <img src="https://img.shields.io/badge/-Android-05122A?style=flat&logo=android" alt="Android" />
+        <img src="https://img.shields.io/badge/-Swift-05122A?style=flat&logo=swift" alt="Swift" />
+        <img src="https://img.shields.io/badge/-Python-05122A?style=flat&logo=python" alt="Python" />
+        <img src="https://img.shields.io/badge/-Git-05122A?style=flat&logo=git" alt="Git" />
       </div>
     </section>
 
@@ -198,12 +294,13 @@
         <a href="mailto:sheibani.amir@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/amir-sheibani-53a34954">LinkedIn</a>
         <a href="https://github.com/amirsheibani">GitHub</a>
-        <a href="https://www.instagram.com/amir.sheibani">Instagram</a>
+        <a href="./resume/Amir_Sheibani_Resume_EU.pdf">Resume EN</a>
+        <a href="./resume/Amir_Sheibani_Resume_IR.pdf">Resume FA</a>
       </div>
     </section>
 
     <footer>
-      © Amir Sheibani · Last Updated 2022
+      © Amir Sheibani · Last updated Jul 2026
     </footer>
 
   </div>
