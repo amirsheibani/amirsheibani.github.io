@@ -19,40 +19,110 @@
 
     body {
       margin: 0;
-      background: linear-gradient(135deg, #020617, #0f172a);
+      min-height: 100vh;
       color: var(--text);
       line-height: 1.65;
+      background:
+        radial-gradient(900px 420px at 12% -10%, rgba(56,189,248,0.18), transparent 55%),
+        radial-gradient(700px 380px at 88% 8%, rgba(34,197,94,0.12), transparent 50%),
+        linear-gradient(160deg, #020617 0%, #0f172a 48%, #07111f 100%);
+      background-attachment: fixed;
+      overflow-x: hidden;
     }
 
-    .container { max-width: 920px; margin: auto; padding: 40px 20px 60px; }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -20% -10%;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 30% 40%, rgba(56,189,248,0.08), transparent 28%),
+        radial-gradient(circle at 70% 60%, rgba(34,197,94,0.07), transparent 26%);
+      animation: aurora 18s ease-in-out infinite alternate;
+    }
 
-    header { text-align: center; margin-bottom: 36px; }
-    header h1 { font-size: 2.6rem; margin: 0 0 8px; color: var(--primary); }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      margin: auto;
+      padding: 40px 20px 60px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: rise-in 0.8s ease forwards 0.1s;
+    }
+    header h1 {
+      font-size: 2.6rem;
+      margin: 0 0 8px;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      text-shadow: 0 0 28px rgba(56,189,248,0.25);
+    }
     header .role { margin: 0 0 6px; font-size: 1.05rem; font-weight: 600; color: var(--text); }
     header .contact-line { margin: 0; color: var(--muted); font-size: 0.95rem; }
-    header .contact-line a { color: var(--primary); text-decoration: none; }
+    header .contact-line a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.25s ease, text-shadow 0.25s ease;
+    }
+    header .contact-line a:hover {
+      color: #7dd3fc;
+      text-shadow: 0 0 12px rgba(56,189,248,0.45);
+    }
 
     .cta {
       display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 18px;
     }
     .cta a {
       display: inline-block; padding: 10px 16px; border-radius: 10px;
-      text-decoration: none; font-weight: 600; transition: 0.2s;
+      text-decoration: none; font-weight: 600;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease, background 0.25s ease;
     }
-    .cta .primary { background: var(--primary); color: #020617; }
+    .cta .primary {
+      background: var(--primary);
+      color: #020617;
+      box-shadow: 0 0 0 rgba(56,189,248,0);
+      animation: soft-pulse 2.8s ease-in-out infinite;
+    }
     .cta .secondary {
       background: rgba(255,255,255,0.08); color: white;
       border: 1px solid rgba(255,255,255,0.12);
     }
-    .cta a:hover { transform: translateY(-1px); filter: brightness(1.08); }
+    .cta a:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.08);
+      box-shadow: 0 10px 24px rgba(2,6,23,0.45);
+    }
 
     section {
-      background: rgba(2,6,23,0.8);
+      background: rgba(2,6,23,0.78);
       border: 1px solid rgba(255,255,255,0.05);
       border-radius: 16px;
       padding: 26px 28px;
       margin-bottom: 22px;
       box-shadow: 0 16px 32px rgba(0,0,0,0.25);
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity 0.65s ease,
+        transform 0.65s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section:hover {
+      border-color: rgba(56,189,248,0.18);
+      box-shadow: 0 18px 36px rgba(0,0,0,0.35), 0 0 0 1px rgba(56,189,248,0.05);
     }
 
     section h2 {
@@ -63,8 +133,21 @@
       font-size: 1.15rem;
     }
 
-    .job { margin-bottom: 20px; }
+    .job {
+      margin-bottom: 20px;
+      padding: 10px 12px;
+      margin-left: -12px;
+      margin-right: -12px;
+      border-radius: 12px;
+      border-left: 3px solid transparent;
+      transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    }
     .job:last-child { margin-bottom: 0; }
+    .job:hover {
+      background: rgba(56,189,248,0.05);
+      border-left-color: var(--primary);
+      transform: translateX(4px);
+    }
     .job-head {
       display: flex; justify-content: space-between; gap: 12px;
       align-items: baseline; flex-wrap: wrap;
@@ -82,12 +165,39 @@
     .skills strong { color: var(--primary); }
 
     footer {
-      text-align: center; color: var(--muted); font-size: 0.9rem; margin-top: 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 28px;
+      opacity: 0;
+      animation: rise-in 0.7s ease forwards 0.4s;
+    }
+
+    @keyframes rise-in {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes soft-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(56,189,248,0.0); }
+      50% { box-shadow: 0 0 22px 2px rgba(56,189,248,0.28); }
+    }
+    @keyframes aurora {
+      from { transform: translate3d(0,0,0) scale(1); }
+      to { transform: translate3d(2%, 3%, 0) scale(1.05); }
     }
 
     @media (max-width: 640px) {
       header h1 { font-size: 2rem; }
       section { padding: 20px; }
+      .job:hover { transform: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body::before, .cta .primary, header, footer { animation: none !important; }
+      section, .job, .cta a, header .contact-line a {
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
     }
   </style>
 </head>
@@ -110,7 +220,7 @@
       </div>
     </header>
 
-    <section>
+    <section class="reveal">
       <h2>Summary</h2>
       <p>
         Senior Flutter engineer with 10+ years building production Android, iOS, and Flutter apps across banking, enterprise ERP, marketplaces, and fintech.
@@ -121,7 +231,7 @@
       <p>English: B1 (improving toward B2).</p>
     </section>
 
-    <section>
+    <section class="reveal">
       <h2>Experience</h2>
 
       <div class="job">
@@ -265,13 +375,13 @@
       </div>
     </section>
 
-    <section>
+    <section class="reveal">
       <h2>Education</h2>
       <p><strong>B.Sc. Computer Hardware Engineering</strong> — Adiban Garmsar, Iran · 2013</p>
       <p><strong>A.Sc. Computer Software Engineering</strong> — QIAU, Qazvin, Iran · 2009</p>
     </section>
 
-    <section class="skills">
+    <section class="skills reveal">
       <h2>Skills</h2>
       <p><strong>Languages:</strong> Dart, Swift, Kotlin, Java, Python (exposure: Go, Rust)</p>
       <p><strong>Mobile &amp; Web:</strong> Flutter (Android / iOS / Web / PWA), native Android &amp; iOS, MethodChannel, custom UI &amp; animation</p>
@@ -282,7 +392,7 @@
       <p><strong>Domain:</strong> Banking / payments, enterprise ERP, marketplaces, crypto wallets</p>
     </section>
 
-    <section>
+    <section class="reveal">
       <h2>Languages</h2>
       <p>Persian — Native</p>
       <p>English — B1 (professional reading/writing; speaking improving toward B2)</p>
@@ -293,5 +403,28 @@
     </footer>
 
   </div>
+
+  <script>
+    (() => {
+      const sections = document.querySelectorAll('section.reveal');
+      if (!('IntersectionObserver' in window)) {
+        sections.forEach((el) => el.classList.add('visible'));
+        return;
+      }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+      sections.forEach((el, index) => {
+        el.style.transitionDelay = `${Math.min(index * 0.08, 0.32)}s`;
+        observer.observe(el);
+      });
+    })();
+  </script>
+
 </body>
 </html>
